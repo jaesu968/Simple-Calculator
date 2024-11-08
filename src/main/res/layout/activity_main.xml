@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/number1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="515dp"
+        android:ems="10"
+        android:hint="Enter a number here..."
+        android:inputType="numberDecimal"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.584" />
+
+    <EditText
+        android:id="@+id/number2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:ems="10"
+        android:hint="Enter another number here..."
+        android:inputType="numberDecimal"
+        android:text="0"
+        app:layout_constraintEnd_toEndOf="@+id/number1"
+        app:layout_constraintStart_toStartOf="@+id/number1"
+        app:layout_constraintTop_toBottomOf="@+id/number1" />
+
+    <Button
+        android:id="@+id/equals"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="="
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="@+id/operators"
+        app:layout_constraintStart_toStartOf="@+id/operators"
+        app:layout_constraintTop_toBottomOf="@+id/operators" />
+
+    <RadioGroup
+        android:id="@+id/operators"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:checkedButton="@id/add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/add"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add" />
+
+        <RadioButton
+            android:id="@+id/subtract"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Subtract" />
+
+        <RadioButton
+            android:id="@+id/multiply"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Multiply" />
+
+        <RadioButton
+            android:id="@+id/divide"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Divide" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="The Answer"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="@+id/equals"
+        app:layout_constraintHorizontal_bias="0.525"
+        app:layout_constraintStart_toStartOf="@+id/equals"
+        app:layout_constraintTop_toBottomOf="@+id/equals" />
+</androidx.constraintlayout.widget.ConstraintLayout>
